@@ -1,7 +1,6 @@
 {
-  "name": "react-hive",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@reacom/react-hive",
+  "version": "0.0.1",
   "type": "module",
   "files": [
     "dist"
@@ -19,7 +18,8 @@
     "prebuild": "rm -rf dist",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "publish": "npm run build && npm publish"
   },
   "dependencies": {
     "react": "^18.3.1",
