@@ -3,6 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/react-hive.umd.cjs",
+  "module": "./dist/react-hive.js",
+  "exports": {
+    ".": {
+      "import": "./dist/react-hive.js",
+      "require": "./dist/react-hive.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
