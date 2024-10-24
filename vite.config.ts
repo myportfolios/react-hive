@@ -1,7 +1,12 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
+import { fileURLToPath } from "url";
 
 import react from "@vitejs/plugin-react";
+
+// __dirname equivalent for ES Modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = resolve(__filename, "..");
 
 // https://vite.dev/config/
 
