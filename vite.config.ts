@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import { fileURLToPath } from "url";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 import react from "@vitejs/plugin-react";
 
@@ -13,7 +14,7 @@ const __dirname = resolve(__filename, "..");
 // Import the necessary functions from Vite
 export default defineConfig({
   // Add the React plugin to Vite, enabling React-specific features like JSX support
-  plugins: [react()],
+  plugins: [react(), tsconfigPaths()],
 
   build: {
     // Configure settings for building a library (rather than a typical app)
