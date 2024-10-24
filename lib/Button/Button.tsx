@@ -1,5 +1,8 @@
-import React from "react";
+import { ReactNode } from "react";
 
-export function Button({ children }) {
+interface ButtonProps {
+  children: ReactNode;
+}
+export function Button({ children }: ButtonProps): ReactNode {
   return <button>{children}</button>;
 }
