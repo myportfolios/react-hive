@@ -15,7 +15,6 @@ const __dirname = resolve(__filename, "..");
 export default defineConfig({
   // Add the React plugin to Vite, enabling React-specific features like JSX support
   plugins: [react(), tsconfigPaths()],
-
   build: {
     // Configure settings for building a library (rather than a typical app)
     lib: {
