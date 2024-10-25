@@ -14,8 +14,10 @@
     ".": {
       "import": "./dist/react-hive.js",
       "require": "./dist/react-hive.umd.cjs"
-    }
+    },
+    "./dist/style.css": "./dist/styles.css"
   },
+  "sideEffects": false,
   "scripts": {
     "dev": "npm cache clean --force && vite",
     "prebuild": "rm -rf dist",
