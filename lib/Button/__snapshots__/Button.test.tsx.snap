@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Component: Button > should render 1`] = `
+<div>
+  <button
+    class="bg-red-800"
+  >
+    My Button
+  </button>
+</div>
+`;
