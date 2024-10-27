@@ -22,7 +22,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /** Vitest global test*/
+    "types": ["vitest/globals"] // Includes global Vitest types for test functions like describe, it, and expect, enabling type checking and IntelliSense in test files.
   },
   "include": ["src", "lib"]
 }
