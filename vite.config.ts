@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import { fileURLToPath } from "url";
@@ -40,5 +41,11 @@ export default defineConfig({
         },
       },
     },
+  },
+  test: {
+    globals: true, // Enable global Vitest functions (describe, it) for convenience.
+    environment: "jsdom", // Use jsdom to simulate a browser-like environment for DOM tests.
+    setupFiles: "./lib/test/setup.ts", // Path to a setup file that runs before each test, useful for configuration.
+    css: true, // Allow CSS processing in tests for style-related assertions.
   },
 });
