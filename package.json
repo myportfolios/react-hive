@@ -21,7 +21,7 @@
   "scripts": {
     "dev": "npm cache clean --force && vite",
     "prebuild": "rm -rf dist",
-    "build": "tsc -b && vite build",
+    "build": "rm -rf dist && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "prepublish": "npm run build",
