@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-input {
+  @apply ml-4 mr-4 outline outline-cyan-500;
+}
+
+.variant-sm {
+  @apply w-48;
+}
+
+.variant-md {
+  @apply w-64;
+}
+
+.variant-lg {
+  @apply w-80;
+}
+.variant-xl {
+  @apply w-96;
+}
