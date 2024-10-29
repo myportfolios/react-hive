@@ -3,6 +3,7 @@ export default {
   content: [
     // reference the library only
     "./lib/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {},
