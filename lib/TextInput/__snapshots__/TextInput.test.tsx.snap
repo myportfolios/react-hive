@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Component: TextInput > should render 1`] = `
+<div>
+  <input
+    class="text-input  variant-sm "
+    placeholder="placeholder"
+    type="text"
+    value="This is TextInput Component"
+  />
+</div>
+`;
