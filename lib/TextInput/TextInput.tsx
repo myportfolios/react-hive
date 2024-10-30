@@ -1,7 +1,7 @@
 import "./textInput.css";
 
 interface TextInputProps {
-  handleUserInput?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  handleUserInput: (value: string) => void;
   onKeyboardEnter?: (value: string) => void;
   value: string;
   styles?: string;
@@ -16,6 +16,9 @@ export function TextInput({
   style = {},
   size = "sm",
 }: TextInputProps) {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (handleUserInput) handleUserInput(event.target.value); // Pass just the value
+  };
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter" && onKeyboardEnter) {
       onKeyboardEnter(value);
@@ -27,10 +30,11 @@ export function TextInput({
       type="text"
       placeholder="placeholder"
       value={value}
-      onChange={handleUserInput}
+      onChange={handleChange}
       onKeyDown={handleKeyPress}
       className={textInputStyles}
       style={style}
+      role="textbox"
     />
   );
 }

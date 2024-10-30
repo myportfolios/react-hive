@@ -5,6 +5,7 @@ exports[`Component: TextInput > should render 1`] = `
   <input
     class="text-input  variant-sm "
     placeholder="placeholder"
+    role="textbox"
     type="text"
     value="This is TextInput Component"
   />
