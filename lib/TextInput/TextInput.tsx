@@ -7,6 +7,7 @@ interface TextInputProps {
   styles?: string;
   style?: React.CSSProperties;
   size?: string;
+  error?: string;
 }
 export function TextInput({
   handleUserInput,
@@ -15,6 +16,7 @@ export function TextInput({
   styles = "",
   style = {},
   size = "sm",
+  error,
 }: TextInputProps) {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (handleUserInput) handleUserInput(event.target.value); // Pass just the value
@@ -26,15 +28,18 @@ export function TextInput({
   };
   const textInputStyles = `text-input  variant-${size} ${styles}`;
   return (
-    <input
-      type="text"
-      placeholder="placeholder"
-      value={value}
-      onChange={handleChange}
-      onKeyDown={handleKeyPress}
-      className={textInputStyles}
-      style={style}
-      role="textbox"
-    />
+    <>
+      <input
+        type="text"
+        placeholder="placeholder"
+        value={value}
+        onChange={handleChange}
+        onKeyDown={handleKeyPress}
+        className={textInputStyles}
+        style={style}
+        role="textbox"
+      />
+      {error && <span className="error">{error}</span>}
+    </>
   );
 }

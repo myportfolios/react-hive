@@ -20,3 +20,6 @@
 .variant-xl {
   @apply w-96;
 }
+.error {
+  @apply text-red-500;
+}
