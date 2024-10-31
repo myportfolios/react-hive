@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .text-input {
-  @apply ml-4 mr-4 outline outline-cyan-500;
+  @apply ml-4 mr-4 outline outline-primary;
 }
 
 .variant-sm {
@@ -20,6 +20,6 @@
 .variant-xl {
   @apply w-96;
 }
-.error {
+/* .error {
   @apply text-red-500;
-}
+} */

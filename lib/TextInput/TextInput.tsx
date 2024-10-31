@@ -9,6 +9,7 @@ interface TextInputProps {
   style?: React.CSSProperties;
   size?: string;
   error?: string;
+  isVertical?: boolean;
 }
 export function TextInput({
   handleUserInput,
@@ -18,7 +19,8 @@ export function TextInput({
   styles = "",
   style = {},
   size = "sm",
-  error,
+  error = "Error",
+  isVertical = false,
 }: TextInputProps) {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (handleUserInput) handleUserInput(event.target.value); // Pass just the value
@@ -30,7 +32,7 @@ export function TextInput({
   };
   const textInputStyles = `text-input  variant-${size} ${styles}`;
   return (
-    <>
+    <div className={`flex ${isVertical ? "isVertical" : ""}`}>
       <input
         type={type}
         placeholder="placeholder"
@@ -42,6 +44,6 @@ export function TextInput({
         role="textbox"
       />
       {error && <span className="error">{error}</span>}
-    </>
+    </div>
   );
 }
