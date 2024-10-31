@@ -4,7 +4,7 @@
 
 @layer components {
   .btn {
-    @apply rounded bg-accent1 border border-secondary text-white;
+    @apply rounded bg-accent1 border border-secondary text-white hover:w-full;
   }
 }
 

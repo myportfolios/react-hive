@@ -3,7 +3,7 @@
 exports[`Component: Button > should render 1`] = `
 <div>
   <button
-    class="bg-red-800"
+    class=" btn btn-md btn-text"
   >
     My Button
   </button>

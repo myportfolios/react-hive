@@ -11,13 +11,13 @@ describe(`Component: ${Button.name}`, () => {
     const { container } = render(<Button>My Button</Button>);
 
     expect(container).toMatchInlineSnapshot(`
-    <div>
-  <button
-    class="bg-red-800"
-  >
-    My Button
-  </button>
-</div>
-        `);
+      <div>
+        <button
+          class=" btn btn-md btn-text"
+        >
+          My Button
+        </button>
+      </div>
+    `);
   });
 });
