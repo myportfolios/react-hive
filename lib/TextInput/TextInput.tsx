@@ -3,6 +3,7 @@ import "./textInput.css";
 interface TextInputProps {
   handleUserInput: (value: string) => void;
   onKeyboardEnter?: (value: string) => void;
+  type: "text" | "password" | "email";
   value: string;
   styles?: string;
   style?: React.CSSProperties;
@@ -12,6 +13,7 @@ interface TextInputProps {
 export function TextInput({
   handleUserInput,
   onKeyboardEnter,
+  type = "text",
   value,
   styles = "",
   style = {},
@@ -30,7 +32,7 @@ export function TextInput({
   return (
     <>
       <input
-        type="text"
+        type={type}
         placeholder="placeholder"
         value={value}
         onChange={handleChange}
