@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply rounded bg-accent1 border border-secondary text-white;
+  }
+}
+
+.btn-sm {
+  @apply py-2 px-8;
+}
+
+.btn-md {
+  @apply py-2 px-10;
+}
+
+.btn-lg {
+  @apply py-2 px-12;
+}
+.btn-xl {
+  @apply py-4 px-16;
+}
+
+.btn-text {
+  @apply bg-transparent hover:bg-accent1 border-0 text-accent1 hover:text-white;
+}
+
+.btn-contained {
+  @apply hover:bg-hover;
+}
+.btn-outlined {
+  @apply bg-transparent border border-accent1 text-accent1 hover:border-2 font-bold;
+}
