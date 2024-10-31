@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.isVertical {
+  @apply flex-col;
+}
+.error {
+  @apply ml-3 mr-3 text-red-500 text-sm;
+}
