@@ -26,7 +26,7 @@ export function Login({ title }: LoginProps) {
     <div className="flex flex-col w-64 h-64 items-center p-6 space-y-6 border border-primary shadow-lg">
       <span className="label-component">{title}</span>
       <TextInput
-        handleUserInput={() => {}}
+        handleUserInput={handleInput}
         type="email"
         value={email}
         isVertical

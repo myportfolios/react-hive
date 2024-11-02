@@ -1,7 +1,7 @@
 import "./textInput.css";
 
 interface TextInputProps {
-  handleUserInput: (value: string) => void;
+  handleUserInput: (value: string, type: string) => void;
   onKeyboardEnter?: (value: string) => void;
   type: "text" | "password" | "email";
   value: string;
@@ -23,7 +23,10 @@ export function TextInput({
   isVertical = false,
 }: TextInputProps) {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (handleUserInput) handleUserInput(event.target.value); // Pass just the value
+    if (handleUserInput) {
+      const value = event.target.value;
+      handleUserInput(value, type); // Pass just the value
+    }
   };
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter" && onKeyboardEnter) {
@@ -42,6 +45,7 @@ export function TextInput({
         className={textInputStyles}
         style={style}
         role="textbox"
+        name={type}
       />
       {error && <span className="error">{error}</span>}
     </div>
