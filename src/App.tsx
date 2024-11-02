@@ -5,8 +5,11 @@ import { Login } from "../lib/Login/Login";
 
 function App() {
   const [value, setValue] = useState("");
-  const handleInput = (value: string) => setValue(value);
-  console.log(`value is: ${value}`);
+  const [type, setType] = useState("");
+  const handleInput = (value: string, type: string) => {
+    setValue(value);
+    setType(type);
+  };
   return (
     <div className="tw-col">
       <Button>Test</Button>
@@ -18,7 +21,7 @@ function App() {
         // styles="w-full"
         style={{ width: "100%" }}
       />
-      <Login />
+      <Login title="Testing Login" type={type} />
     </div>
   );
 }
