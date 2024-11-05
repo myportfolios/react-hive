@@ -23,19 +23,21 @@ export function Login({ title }: LoginProps) {
     }
   };
   return (
-    <div className="flex flex-col w-64 h-64 items-center p-6 space-y-6 border border-primary shadow-lg">
-      <span className="label-component">{title}</span>
+    <div className="flex flex-col w-64 items-center p-6 space-y-2 border border-primary shadow-lg">
+      <span className="label">{title}</span>
       <TextInput
         handleUserInput={handleInput}
         type="email"
         value={email}
         isVertical
+        label="Email"
       />
       <TextInput
         handleUserInput={handleInput}
         type="password"
         value={password}
         isVertical
+        label="Password"
       />
       <Button>{"Submit"}</Button>
     </div>

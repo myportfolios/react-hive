@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render Login > should render 1`] = `
+<div>
+  <div>
+    Login
+  </div>
+</div>
+`;

@@ -6,5 +6,5 @@
   @apply flex-col;
 }
 .error {
-  @apply ml-3 mr-3 text-red-500 text-sm;
+  @apply text-red-500 text-sm;
 }

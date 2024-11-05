@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 .text-input {
-  @apply ml-4 mr-4 outline outline-primary;
+  @apply block w-56 rounded-md py-1.5 px-2 ring-1 ring-inset ring-primary focus:accent-accent1;
 }
-
 .variant-sm {
   @apply w-48;
 }
